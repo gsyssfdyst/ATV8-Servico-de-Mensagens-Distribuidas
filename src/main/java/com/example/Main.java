@@ -4,6 +4,10 @@ import java.util.Scanner;
 import java.util.Map;
 import java.util.HashMap;
 
+/**
+ * Ponto de entrada da aplicação. Lida com a interação de linha de comando
+ * com o usuário (post, show, view, etc.).
+ */
 public class Main {
     public static void main(String[] args) {
         MessageService messageService = new MessageService();
@@ -32,8 +36,11 @@ public class Main {
                         messageService.postMessage(user, message);
                         System.out.println("Message posted.");
                     } else {
-                        System.out.println("Authentication failed. Message not posted.");
+                        System.out.println("Falha na autenticação. Mensagem não enviada.");
                     }
+                    break;
+                case "show":
+                    System.out.println("Showing messages feature is not yet implemented.");
                     break;
                 case "view":
                     System.out.print("User: ");
